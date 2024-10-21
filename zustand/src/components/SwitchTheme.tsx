@@ -1,10 +1,15 @@
 import { useThemeStore } from '../store/theme.ts';
-import { useEffect } from 'react';
+import { useEffect, useSyncExternalStore } from 'react';
 import { Switch } from '@headlessui/react';
 
-const SwitchTheme = () => {
-  const { theme, setTheme } = useThemeStore();
+const themeSubscribe = (callback: () => void) => useThemeStore.subscribe(callback);
+const getThemeSnapshot = () => useThemeStore.getState();
 
+const SwitchTheme = () => {
+  //const { theme, setTheme } = useThemeStore();
+  const { theme, setTheme } = useSyncExternalStore(themeSubscribe, getThemeSnapshot);
+
+  console.log('theme:', theme);
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');

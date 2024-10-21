@@ -9,6 +9,7 @@ const getUserSnapshot = () => useUserStore.getState().userName;
 
 const Heading = ({ heading }: { heading: string }) => {
   const userName = useSyncExternalStore(userSubscribe, getUserSnapshot);
+  // const { userName } = useUserStore();
   const { pathname } = useLocation();
 
   console.log(pathname);
@@ -41,7 +42,7 @@ const Heading = ({ heading }: { heading: string }) => {
 const Layout = () => {
   return (
     <div className="flex flex-col items-center min-h-screen  bg-white dark:bg-gray-900 transition-colors">
-      <Heading heading="Client Store" />
+      <Heading heading="Client Store - Zustand편" />
       <main>
         <Outlet />
       </main>

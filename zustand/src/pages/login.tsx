@@ -11,7 +11,6 @@ const LoginPage = () => {
   const handleChangeUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
   };
-
   const handleClickLogin = () => {
     login(username);
     navigate('/');
