@@ -26,7 +26,7 @@ const Heading = ({ heading }: { heading: string }) => {
             pathname !== '/login' && (
               <Link
                 to="/login"
-                className="rounded-lg text-[15px] font-semibold h-10 leading-[30px] bg-[#d72e36] text-white dark:text-black text-center box-border w-[80px]"
+                className="rounded-lg text-[15px] font-semibold h-10 leading-[38px] bg-[#d72e36] text-white dark:text-black text-center box-border w-[80px]"
               >
                 로그인
               </Link>

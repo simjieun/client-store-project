@@ -18,7 +18,7 @@ const LoginPage = () => {
   return (
     <div className="flex flex-col justify-center items-center flex-grow gap-4 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
       <Field>
-        <Label>이름</Label>
+        <Label className="text-sm text-black dark:text-white">이름</Label>
         <Input
           name="username"
           type="text"
@@ -31,7 +31,7 @@ const LoginPage = () => {
       </Field>
       <Button
         onClick={handleClickLogin}
-        className="w-full rounded bg-sky-600 py-2 px-4 text-sm text-white hover:bg-sky-500 active:bg-sky-700 transition"
+        className="w-full rounded bg-red-600 py-2 px-4 text-sm text-white hover:bg-red-500 active:bg-red-700 transition"
       >
         로그인
       </Button>
